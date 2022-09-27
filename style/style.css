@@ -35,6 +35,7 @@ body .bodyHeader {
   width: 100%;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 2;
 }
 body .bodyHeader h1 {
   margin: 6px 10px;
@@ -123,6 +124,7 @@ body .wrapper .content p {
 }
 body .wrapper .content img {
   max-width: 100%;
+  border-radius: 8px;
 }
 body .wrapper .content .tableWrapper {
   padding: 0 1rem;
@@ -166,6 +168,62 @@ body .wrapper .content form input,
 body .wrapper .content form textarea {
   padding: 10px;
 }
+body .wrapper .content .projects {
+  top: 0;
+  position: relative;
+}
+body .wrapper .content .projects .display {
+  border: 2px dashed red;
+}
+body .wrapper .content .projects .display p {
+  text-align: center;
+  margin: 15px 0;
+}
+body .wrapper .content .projects .display ul {
+  border: 2px dashed darkcyan;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .wrapper .content .projects .display ul li {
+  border: 2px dashed blue;
+  list-style-type: none;
+}
+body .wrapper .content .projects .projectsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .wrapper .content .projects .project {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 25%;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+body .wrapper .content .projects .project header {
+  background-color: aliceblue;
+  z-index: 1;
+  position: relative;
+}
+body .wrapper .content .projects .project header p {
+  display: none;
+}
+body .wrapper .content .projects .project header h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 0.7rem;
+}
+body .wrapper .content .projects .project img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 1.4rem 1.4rem;
+}
+body .wrapper .content .projects .project img:hover {
+  transform: scaleX(-1);
+}
 body footer {
   margin-top: 3rem;
   background-color: black;
@@ -200,7 +258,6 @@ body footer a {
   }
   body .wrapper {
     flex-direction: row;
-    min-height: 80vh;
   }
   body .wrapper:nth-child(odd) {
     flex-direction: row-reverse;
